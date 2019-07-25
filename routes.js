@@ -18,4 +18,6 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
+router.post('/dashboard/addassessment', dashboard.addAssessment);
+
 module.exports = router;

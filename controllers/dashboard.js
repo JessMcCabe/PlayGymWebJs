@@ -1,5 +1,5 @@
 "use strict";
-
+const uuid = require('uuid');
 const logger = require("../utils/logger");
 
 
@@ -14,6 +14,16 @@ const dashboard = {
     };
      logger.info('about to render'); //come back to this to see if it logs correctly
     response.render("dashboard", viewData);
+  },
+  
+   addAssessment(request, response) {
+    const newAssessment = {
+      id: uuid(),
+      weight: request.body.weight,
+      
+    };
+    assessmentStore.addAssessment(newAssessment);
+    response.redirect('/dashboard');
   },
 };
 
