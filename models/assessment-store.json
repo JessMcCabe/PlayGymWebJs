@@ -1,24 +1,7 @@
 {
-  "assessmentCollection": [{
+  "assessmentCollection": [
     
-        "assessment":[
-      
-    {
-  
-      "weight": "60",
-      "chest": "34",
-      "thigh": "20",
-      "upperArm": "16",
-      "waist": "30",
-      "hips": "31"
-    }
-          
-  ]
-       
-   
-   
- 
-}
+        
   ]
 
 }

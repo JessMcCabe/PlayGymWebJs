@@ -4,7 +4,7 @@ const logger = require("../utils/logger");
 
 
 const assessmentCollection = require('../models/assessment-store.js');
-
+const accounts = require ('./accounts.js');
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
