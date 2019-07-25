@@ -1,7 +1,13 @@
 {
   "assessmentCollection": [
-    
-        
+    {
+      "id": "a59d098d-e2bc-4b0b-b0c9-5579f539f99f",
+      "weight": "59",
+      "chest": "34",
+      "thigh": "22",
+      "upperarm": "18",
+      "waist": "30",
+      "hips": "32"
+    }
   ]
-
 }

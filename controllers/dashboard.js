@@ -20,9 +20,14 @@ const dashboard = {
     const newAssessment = {
       id: uuid(),
       weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperarm: request.body.upperarm,
+      waist: request.body.waist,
+      hips: request.body.hips,
       
     };
-    assessmentStore.addAssessment(newAssessment);
+    assessmentCollection.addAssessment(newAssessment);
     response.redirect('/dashboard');
   },
 };
