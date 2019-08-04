@@ -17,7 +17,9 @@ const assessmentStore ={
   getAssessment(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
-
+  getUserAssessmets(userId){
+    return this.store.findBy(this.collection,{userId:userId});
+  },
   addAssessment(assessment) {
     this.store.add(this.collection, assessment);
     this.store.save();
@@ -25,7 +27,7 @@ const assessmentStore ={
 
   removeAssessment(id) {
     const assessment = this.getAssessment(id);
-    this.store.remove(this.collection, playlist);
+    this.store.remove(this.collection, assessment);
     this.store.save();
   },
 
@@ -34,18 +36,6 @@ const assessmentStore ={
     this.store.save();
   }
 
- /* addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
-    this.store.save();
-  },
-
-  removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId});
-    this.store.save();
-  },*/
 };
 
 

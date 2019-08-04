@@ -10,7 +10,7 @@ const accounts = require('./controllers/accounts.js');
 //router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
-
+router.get("/account",accounts.profile);
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
@@ -18,6 +18,9 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
-router.post('/dashboard/addassessment', dashboard.addAssessment);
+
+router.post('/dashboard/addassessment/', dashboard.addAssessment);
+
+router.get('/dashboard/deleteAssessment/:id',dashboard.deleteAssessment);
 
 module.exports = router;

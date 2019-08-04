@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {
-    response.cookie('playlist', '');
+    response.cookie('dashboard', '');
     response.redirect('/');
   },
 
@@ -43,7 +43,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if (user) {
-      response.cookie('playlist', user.email);
+      response.cookie('dashboard', user.email);
       logger.info(`logging in ${user.email}`);
       response.redirect('/dashboard');
     } else {
@@ -52,9 +52,17 @@ const accounts = {
   },
 
   getCurrentUser(request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.dashboard;
     return userstore.getUserByEmail(userEmail);
   },
+
+  profile(request,response){
+
+    const viewData ={
+      title:"User Account Profile",
+    }
+    response.render('account', viewData);
+  }
 };
 
 module.exports = accounts;
