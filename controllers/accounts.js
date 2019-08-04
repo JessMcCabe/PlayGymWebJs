@@ -62,6 +62,10 @@ const accounts = {
       title:"User Account Profile",
     }
     response.render('account', viewData);
+  },
+  getTrainersMembers(trainerid){
+
+    return userstore.getTrainersMembers(trainerid);
   }
 };
 

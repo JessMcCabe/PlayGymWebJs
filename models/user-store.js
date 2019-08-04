@@ -25,6 +25,9 @@ const userStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
 
+  getTrainersMembers(trainerid){
+    return this.store.findBy(this.collection,{trainerid: trainerid});
+  }
 
 };
 

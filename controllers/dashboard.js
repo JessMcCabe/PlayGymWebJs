@@ -11,15 +11,27 @@ const dashboard = {
     index(request, response) {
         logger.info("dashboard rendering");
         const loggedInUser = accounts.getCurrentUser(request);
-        const viewData = {
+        const viewDataMember = {
             title: "Play Gym Dashboard",
             assessment:assessmentCollection.getUserAssessmets(loggedInUser.id),
             user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
             bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
         };
+        const viewDataTrainer = {
+            title: "Play Gym Trainer Dashboard",
+            members:accounts.getTrainersMembers(loggedInUser.id),
+            user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
+            bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
+        };
 
         logger.info('about to render'); //come back to this to see if it logs correctly
-        response.render("dashboard", viewData);
+        if(loggedInUser.type==="member"){
+            response.render("dashboard", viewDataMember);
+        }
+        else
+        {
+            response.render("trainerdashboard", viewDataTrainer);
+        }
     },
 
     addAssessment(request, response) {
