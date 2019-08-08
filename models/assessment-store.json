@@ -71,16 +71,6 @@
       "hips": "14"
     },
     {
-      "id": "21236605-7563-4943-bf63-06c90b42aace",
-      "userId": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
-      "weight": "14",
-      "chest": "12",
-      "thigh": "12",
-      "upperArm": "12",
-      "waist": "12",
-      "hips": "12"
-    },
-    {
       "id": "2aa86456-8d78-4429-a7da-0b5e17b1112e",
       "userId": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
       "weight": "12",
@@ -89,6 +79,26 @@
       "upperArm": "14",
       "waist": "30",
       "hips": "31"
+    },
+    {
+      "id": "dfe4d755-b314-45be-9f4d-a75d71d824de",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "59",
+      "chest": "34",
+      "thigh": "22",
+      "upperArm": "18",
+      "waist": "30",
+      "hips": "32"
+    },
+    {
+      "id": "4706bf9d-946f-419e-b72e-29f755b4cf88",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "weight": "56",
+      "chest": "",
+      "thigh": "",
+      "upperArm": "",
+      "waist": "",
+      "hips": ""
     }
   ]
 }

@@ -7,16 +7,11 @@ const assessmentCollection = require('../models/assessment-store.js');
 const accounts = require ('./accounts.js');
 const util = require ('./utility.js');
 
-const dashboard = {
+const trainerDashboard = {
     index(request, response) {
-        logger.info("dashboard rendering");
+        logger.info("trainer dashboard rendering");
         const loggedInUser = accounts.getCurrentUser(request);
-        const viewDataMember = {
-            title: "Play Gym Dashboard",
-            assessment:assessmentCollection.getUserAssessmets(loggedInUser.id),
-            user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
-            bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
-        };
+
         const viewDataTrainer = {
             title: "Play Gym Trainer Dashboard",
             members:accounts.getTrainersMembers(loggedInUser.id),
@@ -25,16 +20,11 @@ const dashboard = {
         };
 
         logger.info('about to render'); //come back to this to see if it logs correctly
-        if(loggedInUser.type==="member"){
-            response.render("dashboard", viewDataMember);
-        }
-        else
-        {
-            response.render("trainerdashboard", viewDataTrainer);
-        }
+        response.render("trainerdashboard", viewDataTrainer);
+
     },
 
-    addAssessment(request, response) {
+    /*addAssessment(request, response) {
         const loggedInUser = accounts.getCurrentUser(request);
         const newAssessment = {
             id: uuid(),
@@ -56,16 +46,22 @@ const dashboard = {
         logger.debug('Deleting assessment ${id}');
         assessmentCollection.removeAssessment(id);
         response.redirect('/dashboard');
-    },
+    },*/
 
     getMemberAssessments(request,response){
-        const member = request.params.id;
-        assessmentCollection.getUserAssessmets(member)
-        response.redirect('/dashboard')
+        const viewTrainerMember = {
+            title: "Play Gym Trainer Dashboard",
+            member: request.params.id,
+            user: "User",//accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
+            bmi: "1",//util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
+            assessment:assessmentCollection.getUserAssessmets(request.params.id),
+        };
+
+        response.render("trainermemberdetails",viewTrainerMember);
     },
 
 
 
 };
 
-module.exports = dashboard;
+module.exports = trainerDashboard;
