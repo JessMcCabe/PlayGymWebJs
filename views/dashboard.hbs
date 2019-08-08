@@ -1,0 +1,24 @@
+{{> menu id="dashboard"}}
+
+<section class="ui segment">
+  <h2 class="ui header">
+      <section class="ui segment">
+          <div class="ui equal width four column grid">
+              <div class ="column">
+                  <i class="huge icon user"></i>
+                  <div class="row">
+                      {{user}}
+                  </div>
+              </div>
+                  <div class ="column">
+                      <i class="huge icon heartbeat"></i>
+                      <div class="row">
+                          {{bmi}}
+                      </div>
+                  </div>
+          </div>
+</section>
+  </h2>
+  {{> listassessments}}
+   {{> addassessment}}
+</section>
