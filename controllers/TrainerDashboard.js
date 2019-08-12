@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 
 
 const assessmentCollection = require('../models/assessment-store.js');
+const users = require('../models/user-store.js');
 const accounts = require ('./accounts.js');
 const util = require ('./utility.js');
 
@@ -24,34 +25,12 @@ const trainerDashboard = {
 
     },
 
-    /*addAssessment(request, response) {
-        const loggedInUser = accounts.getCurrentUser(request);
-        const newAssessment = {
-            id: uuid(),
-            userId: loggedInUser.id,
-            weight: request.body.weight,
-            chest: request.body.chest,
-            thigh: request.body.thigh,
-            upperArm: request.body.upperArm,
-            waist: request.body.waist,
-            hips: request.body.hips,
-
-
-        };
-        assessmentCollection.addAssessment(newAssessment);
-        response.redirect('/dashboard');
-    },
-    deleteAssessment(request,response) {
-        const id = request.params.id;
-        logger.debug('Deleting assessment ${id}');
-        assessmentCollection.removeAssessment(id);
-        response.redirect('/dashboard');
-    },*/
 
     getMemberAssessments(request,response){
         const viewTrainerMember = {
             title: "Play Gym Trainer Dashboard",
             member: request.params.id,
+            name: users.getUserById(request.params.id).firstName,
             user: "User",//accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
             bmi: "1",//util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
             assessment:assessmentCollection.getUserAssessmets(request.params.id),
@@ -60,7 +39,14 @@ const trainerDashboard = {
         response.render("trainermemberdetails",viewTrainerMember);
     },
 
+    addAssessmentComment(request, response) {
 
+        const assessmentid = (request.params.id)
+        const comment = request.body.comment
+
+        assessmentCollection.addAssessmentComment(assessmentid,comment);
+        response.redirect("/dashboard");
+    },
 
 };
 

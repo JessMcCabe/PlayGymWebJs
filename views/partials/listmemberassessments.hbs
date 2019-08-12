@@ -1,0 +1,64 @@
+{{#each assessment}}
+    <table class="ui table">
+        <thead>
+        <tr>
+            <th>Weight</th>
+            <th>Chest</th>
+            <th>Thigh</th>
+            <th>Upper Arm</th>
+            <th>Waist</th>
+            <th>Hips</th>
+            <th>Comments</th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+    <tr>
+        <td>
+            {{weight}}
+        </td>
+        <td>
+            {{chest}}
+        </td>
+        <td>
+            {{thigh}}
+        </td>
+        <td>
+            {{upperArm}}
+        </td>
+        <td>
+            {{waist}}
+        </td>
+        <td>
+            {{hips}}
+        </td>
+        <td>
+            {{comment}}
+        </td>
+        <td>
+            <a href="/dashboard/deleteAssessment/{{id}}" class="ui icon button">
+                <i class="icon trash"></i>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    <section>
+    <tr>
+    <td>
+    <div>
+    <form class="ui stacked segment form" action="/trainerdashboard/addassessmentcomment/{{id}}/Comment" method="POST">
+        <div class="one field">
+            <div class="field">
+                <label>Comment</label>
+                <input placeholder="" type="text" name="comment">
+            </div>
+        </div>
+        <button class="ui blue submit button">Add Comment</button>
+    </form>
+    </div>
+    </td>
+    </tr>
+    </section>
+{{/each}}
+</table>

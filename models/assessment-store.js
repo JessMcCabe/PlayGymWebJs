@@ -34,6 +34,14 @@ const assessmentStore ={
   removeAllAssessment() {
     this.store.removeAll(this.collection);
     this.store.save();
+  },
+  addAssessmentComment(assessmentid,comment){
+
+    const assessment = this.getAssessment(assessmentid);
+    assessment.comment = comment;
+    //assessment.comment.push(comment);
+    this.store.save();
+
   }
 
 };
