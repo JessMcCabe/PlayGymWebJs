@@ -8,7 +8,8 @@
       "thigh": "22",
       "upperArm": "18",
       "waist": "30",
-      "hips": "32"
+      "hips": "32",
+      "comment": "Great work"
     },
     {
       "id": "c362538e-d3f2-42ed-b625-96911eee875f",
@@ -18,7 +19,8 @@
       "thigh": "52",
       "upperArm": "52",
       "waist": "52",
-      "hips": "52"
+      "hips": "52",
+      "comment": "Great work"
     },
     {
       "id": "0daa029a-d5a9-4d0e-b2b7-9c67b2cad2a7",
@@ -28,7 +30,8 @@
       "thigh": "",
       "upperArm": "",
       "waist": "",
-      "hips": ""
+      "hips": "",
+      "comment": "Great work"
     },
     {
       "id": "ec8cc850-fb70-4728-a8bc-934aa3fdd8c4",
@@ -38,7 +41,8 @@
       "thigh": "",
       "upperArm": "",
       "waist": "",
-      "hips": ""
+      "hips": "",
+      "comment": "Great work"
     },
     {
       "id": "8881eb2c-3b47-401a-8076-a6e9aac963f3",
@@ -48,7 +52,8 @@
       "thigh": "56",
       "upperArm": "56",
       "waist": "56",
-      "hips": "56"
+      "hips": "56",
+      "comment": "Good going Marge"
     },
     {
       "id": "a618d4a0-839f-49af-a4bd-c944fd0d5de7",
@@ -58,7 +63,8 @@
       "thigh": "12",
       "upperArm": "12",
       "waist": "12",
-      "hips": "12"
+      "hips": "12",
+      "comment": "Great work"
     },
     {
       "id": "019e4b78-8de8-4e1a-841e-fd8c97231672",
@@ -68,7 +74,8 @@
       "thigh": "14",
       "upperArm": "14",
       "waist": "14",
-      "hips": "14"
+      "hips": "14",
+      "comment": "Great work"
     },
     {
       "id": "2aa86456-8d78-4429-a7da-0b5e17b1112e",
@@ -78,7 +85,8 @@
       "thigh": "18",
       "upperArm": "14",
       "waist": "30",
-      "hips": "31"
+      "hips": "31",
+      "comment": "Great work"
     },
     {
       "id": "dfe4d755-b314-45be-9f4d-a75d71d824de",
@@ -88,17 +96,30 @@
       "thigh": "22",
       "upperArm": "18",
       "waist": "30",
-      "hips": "32"
+      "hips": "32",
+      "comment": "Good job, through glitch"
     },
     {
-      "id": "4706bf9d-946f-419e-b72e-29f755b4cf88",
+      "id": "281c42ec-cb44-442e-8c8c-de7bc7f48b76",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "56",
-      "chest": "",
-      "thigh": "",
-      "upperArm": "",
-      "waist": "",
-      "hips": ""
+      "weight": "59",
+      "chest": "52",
+      "thigh": "56",
+      "upperArm": "14",
+      "waist": "12",
+      "hips": "52",
+      "comment": "Fantastic job Homer!"
+    },
+    {
+      "id": "b8e095a5-7cea-49bf-bb30-c51c91fc2d14",
+      "userId": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
+      "weight": "52",
+      "chest": "52",
+      "thigh": "52",
+      "upperArm": "12",
+      "waist": "52",
+      "hips": "",
+      "comment": "Good job, through glitch"
     }
   ]
 }
