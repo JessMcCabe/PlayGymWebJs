@@ -21,8 +21,10 @@ router.post('/authenticate', accounts.authenticate);
 
 
 router.post('/dashboard/addassessment/', dashboard.addAssessment);
+router.post('/trainerdashboard/addassessmentcomment/:id/Comment',trainerdashboard.addAssessmentComment);
 
 router.get('/dashboard/deleteAssessment/:id',dashboard.deleteAssessment);
 router.get('/dashboard/member/:id/assessments',trainerdashboard.getMemberAssessments);
+
 
 module.exports = router;
