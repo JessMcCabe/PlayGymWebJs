@@ -9,8 +9,9 @@ const utility = {
 
     calculateBMI(user,assessment){
         const user1 = user;
-        return user1.weight / (user1.height*user1.height);
-
+        let bmi = 0;
+        bmi = user1.weight / (user1.height*user1.height);
+        return bmi;
         //weight/(height*height)
     }
 };
