@@ -23,6 +23,30 @@
       "waist": 12,
       "hips": 0,
       "comment": ""
+    },
+    {
+      "id": "69341c18-99fd-4fe3-892e-b8f34f055a4c",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "date": "2019-08-25T12:59:11.016Z",
+      "weight": 52,
+      "chest": 0,
+      "thigh": 0,
+      "upperArm": 0,
+      "waist": 0,
+      "hips": 0,
+      "comment": ""
+    },
+    {
+      "id": "f8adcfda-5e01-486c-b5da-9bc342b9d7cb",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "date": "2019-08-25T12:59:30.308Z",
+      "weight": 60,
+      "chest": 0,
+      "thigh": 0,
+      "upperArm": 0,
+      "waist": 0,
+      "hips": 0,
+      "comment": ""
     }
   ]
 }

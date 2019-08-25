@@ -35,6 +35,13 @@ const userStore = {
     this.store.save();
   },
 
+  updateCurrentWeight(loggedInUser,newAssessment){
+    const user = this.getUserById(loggedInUser.id);
+    user.currentWeight = newAssessment.weight;
+    this.store.save();
+
+  }
+
 };
 
 module.exports = userStore;

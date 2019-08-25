@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 
 
 const assessmentCollection = require('../models/assessment-store.js');
+const userCollection = require('../models/user-store');
 const accounts = require ('./accounts.js');
 const util = require ('./utility.js');
 
@@ -53,6 +54,7 @@ const dashboard = {
 
         };
         assessmentCollection.addAssessment(newAssessment);
+        userCollection.updateCurrentWeight(loggedInUser,newAssessment);
         response.redirect('/dashboard');
     },
     deleteAssessment(request,response) {
@@ -68,7 +70,18 @@ const dashboard = {
         response.redirect('/dashboard')
     },
 
+    userProfile(request,response){
+        const loggedInUser = accounts.getCurrentUser(request);
+        const viewData ={
+            title:"User Account Profile",
+            user: loggedInUser.firstName,
 
+        }
+        response.render('account', viewData);
+        logger.info(`logging in ${loggedInUser.email}`);
+
+
+    },
 
 };
 
