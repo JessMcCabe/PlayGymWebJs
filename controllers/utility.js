@@ -7,11 +7,13 @@ const user = require('../models/user-store.js');
 
 const utility = {
 
-    calculateBMI(user,assessment){
-        const user1 = user;
-        return user1.weight / (user1.height*user1.height);
+    calculateBMI(user){
 
-        //weight/(height*height)
+        //logger.info( user.currentWeight );
+         return Math.round(user.currentWeight / (user.height * user.height)*100)/100;
+        //return typeof  user.currentWeight  ;
+
+
     }
 };
 

@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 
 
 const assessmentCollection = require('../models/assessment-store.js');
+const userCollection = require('../models/user-store');
 const accounts = require ('./accounts.js');
 const util = require ('./utility.js');
 
@@ -15,7 +16,8 @@ const dashboard = {
             title: "Play Gym Dashboard",
             assessment:assessmentCollection.getUserAssessmets(loggedInUser.id),
             user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
-            bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
+            //bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
+            bmi: Number(util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id)))
         };
         const viewDataTrainer = {
             title: "Play Gym Trainer Dashboard",
@@ -24,7 +26,7 @@ const dashboard = {
             bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
         };
 
-        logger.info('about to render'); //come back to this to see if it logs correctly
+        logger.info('about to render' ); //come back to this to see if it logs correctly
         if(loggedInUser.type==="member"){
             response.render("dashboard", viewDataMember);
         }
@@ -36,20 +38,23 @@ const dashboard = {
 
     addAssessment(request, response) {
         const loggedInUser = accounts.getCurrentUser(request);
+
         const newAssessment = {
             id: uuid(),
             userId: loggedInUser.id,
-            weight: request.body.weight,
-            chest: request.body.chest,
-            thigh: request.body.thigh,
-            upperArm: request.body.upperArm,
-            waist: request.body.waist,
-            hips: request.body.hips,
+            date:  new Date(),
+            weight: Number(request.body.weight),
+            chest: Number(request.body.chest),
+            thigh: Number(request.body.thigh),
+            upperArm: Number(request.body.upperArm),
+            waist: Number(request.body.waist),
+            hips: Number(request.body.hips),
             comment:""
 
 
         };
         assessmentCollection.addAssessment(newAssessment);
+        userCollection.updateCurrentWeight(loggedInUser,newAssessment);
         response.redirect('/dashboard');
     },
     deleteAssessment(request,response) {
@@ -65,7 +70,18 @@ const dashboard = {
         response.redirect('/dashboard')
     },
 
+    userProfile(request,response){
+        const loggedInUser = accounts.getCurrentUser(request);
+        const viewData ={
+            title:"User Account Profile",
+            user: loggedInUser.firstName,
 
+        }
+        response.render('account', viewData);
+        logger.info(`logging in ${loggedInUser.email}`);
+
+
+    },
 
 };
 

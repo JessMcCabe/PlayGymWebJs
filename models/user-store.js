@@ -27,6 +27,19 @@ const userStore = {
 
   getTrainersMembers(trainerid){
     return this.store.findBy(this.collection,{trainerid: trainerid});
+  },
+
+  deleteUser(id){
+    const userToDelete = this.getUserById(id);
+    this.store.remove(this.collection,userToDelete);
+    this.store.save();
+  },
+
+  updateCurrentWeight(loggedInUser,newAssessment){
+    const user = this.getUserById(loggedInUser.id);
+    user.currentWeight = newAssessment.weight;
+    this.store.save();
+
   }
 
 };

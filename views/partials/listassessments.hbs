@@ -2,18 +2,23 @@
 <table class="ui table">
   <thead>
     <tr>
+      <th>Date</th>
       <th>Weight</th>
       <th>Chest</th>
       <th>Thigh</th>
       <th>Upper Arm</th>
       <th>Waist</th>
       <th>Hips</th>
-        <th>Comments</th>
+      <th>Trend</th>
+      <th>Comments</th>
         <th></th>
     </tr>
   </thead>
  <tbody>
       <tr>
+          <td>
+              {{date}}
+          </td>
         <td>
           {{weight}}
         </td>
@@ -32,9 +37,12 @@
         <td>
           {{hips}}
         </td>
-          <td>
-              {{comment}}
-          </td>
+        <td>
+          {{trend}}
+        </td>
+        <td>
+           {{comment}}
+        </td>
           <td>
           <a href="/dashboard/deleteAssessment/{{id}}" class="ui icon button">
               <i class="icon trash"></i>
