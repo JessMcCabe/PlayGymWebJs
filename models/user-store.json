@@ -7,6 +7,8 @@
       "password": "secret",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "type": "member",
+      "currentWeight": 61,
+      "height": 1.2,
       "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452"
     },
     {
@@ -24,7 +26,33 @@
       "password": "secret",
       "id": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
       "type": "member",
+      "currentWeight": 60,
+      "height": 1.2,
       "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452"
+    },
+    {
+      "firstName": "test",
+      "lastName": "user",
+      "email": "test@gmail.com",
+      "gender": "on",
+      "password": "secret",
+      "id": "66582e4f-611a-4bd8-8774-9dc0ab5c40f5"
+    },
+    {
+      "firstName": "test2",
+      "lastName": "user2",
+      "email": "test2@gmail.com",
+      "gender": "on",
+      "password": "secret",
+      "id": "ed31c455-2354-4db0-9ac2-0c311762c733"
+    },
+    {
+      "firstName": "test23",
+      "lastName": "user33",
+      "email": "test33@gmail.com",
+      "gender": "male",
+      "password": "secret",
+      "id": "070632bd-2aad-4eca-bc73-309f7aaf40a1"
     }
   ]
 }

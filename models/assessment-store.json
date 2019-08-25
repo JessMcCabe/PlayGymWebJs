@@ -1,125 +1,52 @@
 {
   "assessmentCollection": [
     {
-      "id": "4929e60f-d0cd-489b-8388-f2a183321133",
-      "userid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "59",
-      "chest": "34",
-      "thigh": "22",
-      "upperArm": "18",
-      "waist": "30",
-      "hips": "32",
-      "comment": "Great work"
-    },
-    {
-      "id": "c362538e-d3f2-42ed-b625-96911eee875f",
-      "userid": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
-      "weight": "52",
-      "chest": "52",
-      "thigh": "52",
-      "upperArm": "52",
-      "waist": "52",
-      "hips": "52",
-      "comment": "Great work"
-    },
-    {
-      "id": "0daa029a-d5a9-4d0e-b2b7-9c67b2cad2a7",
-      "userid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "",
-      "chest": "",
-      "thigh": "",
-      "upperArm": "",
-      "waist": "",
-      "hips": "",
-      "comment": "Great work"
-    },
-    {
-      "id": "ec8cc850-fb70-4728-a8bc-934aa3fdd8c4",
-      "userid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "52",
-      "chest": "",
-      "thigh": "",
-      "upperArm": "",
-      "waist": "",
-      "hips": "",
-      "comment": "Great work"
-    },
-    {
-      "id": "8881eb2c-3b47-401a-8076-a6e9aac963f3",
+      "id": "86bef9e9-01a9-4d90-8193-40c6bec88f2f",
       "userId": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
-      "weight": "56",
-      "chest": "56",
-      "thigh": "56",
-      "upperArm": "56",
-      "waist": "56",
-      "hips": "56",
-      "comment": "Good going Marge"
+      "date": "2019-08-17T16:20:55.777Z",
+      "weight": 59,
+      "chest": 34,
+      "thigh": 22,
+      "upperArm": 0,
+      "waist": 0,
+      "hips": 0,
+      "comment": ""
     },
     {
-      "id": "a618d4a0-839f-49af-a4bd-c944fd0d5de7",
-      "userid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "12",
-      "chest": "12",
-      "thigh": "12",
-      "upperArm": "12",
-      "waist": "12",
-      "hips": "12",
-      "comment": "Great work"
-    },
-    {
-      "id": "019e4b78-8de8-4e1a-841e-fd8c97231672",
-      "userId": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "14",
-      "chest": "14",
-      "thigh": "14",
-      "upperArm": "14",
-      "waist": "14",
-      "hips": "14",
-      "comment": "Great work"
-    },
-    {
-      "id": "2aa86456-8d78-4429-a7da-0b5e17b1112e",
-      "userId": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
-      "weight": "12",
-      "chest": "30",
-      "thigh": "18",
-      "upperArm": "14",
-      "waist": "30",
-      "hips": "31",
-      "comment": "Great work"
-    },
-    {
-      "id": "dfe4d755-b314-45be-9f4d-a75d71d824de",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "59",
-      "chest": "34",
-      "thigh": "22",
-      "upperArm": "18",
-      "waist": "30",
-      "hips": "32",
-      "comment": "Good job, through glitch"
-    },
-    {
-      "id": "281c42ec-cb44-442e-8c8c-de7bc7f48b76",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "weight": "59",
-      "chest": "52",
-      "thigh": "56",
-      "upperArm": "14",
-      "waist": "12",
-      "hips": "52",
-      "comment": "Fantastic job Homer!"
-    },
-    {
-      "id": "b8e095a5-7cea-49bf-bb30-c51c91fc2d14",
+      "id": "07876f09-bc2a-48b4-a8df-ca1e1c6a7393",
       "userId": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
-      "weight": "52",
-      "chest": "52",
-      "thigh": "52",
-      "upperArm": "12",
-      "waist": "52",
-      "hips": "",
-      "comment": "Good job, through glitch"
+      "date": "2019-08-25T12:47:40.865Z",
+      "weight": 56,
+      "chest": 34,
+      "thigh": 52,
+      "upperArm": 14,
+      "waist": 12,
+      "hips": 0,
+      "comment": ""
+    },
+    {
+      "id": "69341c18-99fd-4fe3-892e-b8f34f055a4c",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "date": "2019-08-25T12:59:11.016Z",
+      "weight": 52,
+      "chest": 0,
+      "thigh": 0,
+      "upperArm": 0,
+      "waist": 0,
+      "hips": 0,
+      "comment": ""
+    },
+    {
+      "id": "f8adcfda-5e01-486c-b5da-9bc342b9d7cb",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "date": "2019-08-25T12:59:30.308Z",
+      "weight": 60,
+      "chest": 0,
+      "thigh": 0,
+      "upperArm": 0,
+      "waist": 0,
+      "hips": 0,
+      "comment": ""
     }
   ]
 }

@@ -48,6 +48,11 @@ const trainerDashboard = {
         response.redirect("/dashboard");
     },
 
+    deleteMember(request, response) {
+        const user = request.params.id;
+        users.deleteUser(user);
+        response.redirect('/dashboard');
+    },
 };
 
 module.exports = trainerDashboard;
