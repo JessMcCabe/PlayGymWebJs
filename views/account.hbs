@@ -12,11 +12,11 @@
     <div class="two fields">
         <div class="required field">
             <label>First Name</label>
-            <input placeholder={{user}} type="text" name="name">
+            <input placeholder="{{firstName}}" type="text" name="firstName">
         </div>
         <div class="required field">
             <label>Last Name</label>
-            <input placeholder={{user}} type="text" name="name">
+            <input placeholder="{{lastName}}" type="text" name="lastName">
         </div>
         </div>
         <div class="grouped fields">
@@ -29,18 +29,18 @@
         </div>
         <div class="field">
             <div class="ui radio checkbox">
-                <input type="radio" name="gender"value ="male">
+                <input type="radio" name="gender" value ="male">
                 <label>Male</label>
             </div>
             </div>
         </div>
         <div class="required field">
         <label>Email</label>
-        <input placeholder=${member.email} type="text" name="email">
+        <input placeholder="{{email}}" type="text" name="email">
      </div>
     <div class="required field">
         <label>Password</label>
-        <input type="password" name="password">
+        <input placeholder="{{password}}" type="password" name="password">
     </div>
     <button class="ui blue submit button">Submit</button>
 </form>
