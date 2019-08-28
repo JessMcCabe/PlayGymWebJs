@@ -74,14 +74,26 @@ const dashboard = {
         const loggedInUser = accounts.getCurrentUser(request);
         const viewData ={
             title:"User Account Profile",
-            user: loggedInUser.firstName,
+            firstName: loggedInUser.firstName,
+            lastName: loggedInUser.lastName
 
         }
+
         response.render('account', viewData);
         logger.info(`logging in ${loggedInUser.email}`);
 
 
     },
+    updateProfile(request,response){
+        logger.info(`logging in ${request.body.firstName}`);
+        const loggedInUser = accounts.getCurrentUser(request);
+        userCollection.updateMemberDetails(loggedInUser,request)
+
+
+        response.redirect('/');
+
+
+    }
 
 };
 
