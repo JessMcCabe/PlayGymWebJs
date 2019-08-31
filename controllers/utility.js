@@ -106,6 +106,9 @@ return indicatorCol;
 
         return category;
 
+    },
+    calcTotalMeasure(assessment){
+      return (assessment.chest + assessment.thigh + assessment.upperArm + assessment.waist + assessment.hips);
     }
 };
 

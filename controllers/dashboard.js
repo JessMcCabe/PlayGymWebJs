@@ -16,7 +16,7 @@ const dashboard = {
         const viewDataMember = {
             title: "Play Gym Dashboard",
             assessment:assessmentCollection.getUserAssessmets(loggedInUser.id),
-            user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
+            user:accounts.getCurrentUser(request).firstName.concat(" ").concat(accounts.getCurrentUser(request).lastName),
             //bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
             bmi: Number(util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))),
             idealWeightInd: util.isIdealWeight(loggedInUser),
@@ -25,7 +25,7 @@ const dashboard = {
         const viewDataTrainer = {
             title: "Play Gym Trainer Dashboard",
             members:accounts.getTrainersMembers(loggedInUser.id),
-            user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
+            user:accounts.getCurrentUser(request).firstName.concat(" ").concat(accounts.getCurrentUser(request).lastName),
             bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
         };
 
@@ -56,6 +56,13 @@ const dashboard = {
 
 
         };
+        let newTotalMeasure = util.calcTotalMeasure(newAssessment);
+        let previousTotalMeasure = loggedInUser.totalMeasure;
+        loggedInUser.totalMeasure = newTotalMeasure;
+        if (newTotalMeasure < previousTotalMeasure){
+            newAssessment.trend = "green";
+        }
+        else newAssessment.trend = "red";
         assessmentCollection.addAssessment(newAssessment);
         userCollection.updateCurrentWeight(loggedInUser,newAssessment);
         response.redirect('/dashboard');
