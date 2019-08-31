@@ -79,7 +79,37 @@ return indicatorCol;
         logger.info(`height in feet method`);
         //meters to feet
     return height * 3.2808;
-}
+},
+    determineBMICategory(user){
+
+        const bmiValue = this.calculateBMI(user);
+        let category = "";
+
+        if (bmiValue <16){
+            category = "SEVERELY UNDERWEIGHT";
+        }
+        else  if (bmiValue >=16 & bmiValue <18.5 ){
+            category = "UNDERWEIGHT";
+        }
+        else  if (bmiValue >=18.5 & bmiValue <25 ){
+            category = "NORMAL";
+        }
+        else  if (bmiValue >=25 & bmiValue <30 ){
+            category = "OVERWEIGHT";
+        }
+        else  if (bmiValue >=30 & bmiValue <35 ){
+            category = "MODERATELY OBESE";
+        }
+        else  if (bmiValue >=35 ){
+            category = "SEVERELY OBESE";
+        }
+
+        return category;
+
+    },
+    calcTotalMeasure(assessment){
+      return (assessment.chest + assessment.thigh + assessment.upperArm + assessment.waist + assessment.hips);
+    }
 };
 
 module.exports = utility;
