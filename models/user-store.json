@@ -8,7 +8,7 @@
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "type": "member",
       "currentWeight": 59,
-      "height": 1.2,
+      "height": 1.8,
       "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452"
     },
     {
@@ -20,47 +20,47 @@
       "type": "trainer"
     },
     {
-      "firstName": "marger",
+      "firstName": "Sarah",
+      "lastName": "Tanner",
+      "email": "sarahtanner@gmail.com",
+      "password": "secret",
+      "id": "bd928f93-b899-4fa4-b046-ac9b8d25b451",
+      "type": "trainer"
+    },
+    {
+      "firstName": "margery",
       "lastName": "simpson",
       "email": "marge@simpson",
       "password": "secret",
       "id": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
       "type": "member",
-      "currentWeight": 60,
-      "height": 1.2,
+      "currentWeight": 73,
+      "height": 1.9,
       "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
       "gender": "female"
     },
     {
-      "firstName": "test",
-      "lastName": "user",
-      "email": "test@gmail.com",
-      "gender": "on",
-      "password": "secret",
-      "id": "66582e4f-611a-4bd8-8774-9dc0ab5c40f5"
-    },
-    {
-      "firstName": "test2",
-      "lastName": "user2",
-      "email": "test2@gmail.com",
-      "gender": "on",
-      "password": "secret",
-      "id": "ed31c455-2354-4db0-9ac2-0c311762c733"
-    },
-    {
-      "firstName": "test23",
-      "lastName": "user33",
-      "email": "test33@gmail.com",
+      "firstName": "TestMember1",
+      "lastName": "test",
+      "email": "tesmember1@gmail.com",
       "gender": "male",
+      "type": "member",
       "password": "secret",
-      "id": "070632bd-2aad-4eca-bc73-309f7aaf40a1"
+      "id": "97d498bf-a8de-4e80-b5f2-90556db4ee60",
+      "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452",
+      "currentWeight": 56
     },
     {
-      "firstName": "Maggie",
-      "lastName": "Simpson",
-      "email": "maggie@simpson",
+      "firstName": "TestMember2",
+      "lastName": "test",
+      "email": "tesmember2@gmail.com",
+      "gender": "male",
+      "type": "member",
+      "height": "1.7",
+      "currentWeight": "59",
       "password": "secret",
-      "id": "d475380b-7d15-4be4-a6d4-cec0a95910b5"
+      "id": "e4690991-ed21-4f09-a2e0-fe58794e4862",
+      "trainerid": "bd928f93-b899-4fa4-b046-ac9b8d25b452"
     }
   ]
 }

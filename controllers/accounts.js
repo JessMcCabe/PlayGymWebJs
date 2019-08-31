@@ -27,7 +27,7 @@ const accounts = {
 
   signup(request, response) {
     const viewData = {
-      title: 'Login to the Service',
+      title: 'Sign Up',
     };
     response.render('signup', viewData);
   },
@@ -35,6 +35,9 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuid();
+    if(request.body.type === "member") {
+      user.trainerid = "bd928f93-b899-4fa4-b046-ac9b8d25b452";//by default every user is assigned to me - add future option to select trainer
+    }
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect('/');
@@ -56,13 +59,7 @@ const accounts = {
     return userstore.getUserByEmail(userEmail);
   },
 
-  profile(request,response){
 
-    const viewData ={
-      title:"User Account Profile",
-    }
-    response.render('account', viewData);
-  },
   getTrainersMembers(trainerid){
 
     return userstore.getTrainersMembers(trainerid);

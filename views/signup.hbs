@@ -12,10 +12,52 @@
       <input placeholder="Last Name" type="text"  name="lastName">
     </div>
   </div>
+    <div class="two fields">
   <div class="field">
-    <label>Email</label>
-    <input placeholder="Email" type="text" name="email">
-  </div>
+        <label>Email</label>
+        <input placeholder="Email" type="text" name="email">
+    </div>
+        <div class="grouped fields">
+            <label>Gender</label>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="gender" value="female">
+                    <label>Female</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="gender" value ="male">
+                    <label>Male</label>
+                </div>
+        </div>
+    </div>
+        <div class="grouped fields">
+            <label>User Type</label>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="type" value="trainer">
+                    <label>Trainer</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="type" value ="member">
+                    <label>Member</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two fields">
+        <div class="field">
+            <label>Height</label>
+            <input placeholder="0.0M" type="number" step="0.01" name="height">
+        </div>
+    <div class="field">
+        <label>Starting Weight</label>
+        <input placeholder="0.00KG" type="number" step="0.01"  name="currentWeight">
+    </div>
+    </div>
   <div class="field">
     <label>Password</label>
     <input type="password" name="password">
