@@ -71,6 +71,12 @@ const userStore = {
     logger.info(`currentuser last name is ${currentUser.lastName}`);
   //  this.store.save();
   },
+  updateAddress(user,newAddress){
+    const currentUser = this.getUserById(user.id);
+    currentUser.address = newAddress;
+  //  this.store.save();
+    
+  },
   updateMemberDetails(user, request) {
     //call above methods then save here
     const currentUser = this.getUserById(user.id);
@@ -98,6 +104,10 @@ const userStore = {
 
     if (request.body.gender) {
       this.updateGender(currentUser, request.body.gender);
+      this.store.save();
+    }
+      if (request.body.address) {
+      this.updateAddress(currentUser, request.body.address);
       this.store.save();
     }
 
