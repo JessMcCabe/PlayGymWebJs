@@ -19,7 +19,8 @@ const dashboard = {
             user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
             //bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
             bmi: Number(util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))),
-            idealWeightInd: util.isIdealWeight(loggedInUser)
+            idealWeightInd: util.isIdealWeight(loggedInUser),
+            bmiCategory: util.determineBMICategory(loggedInUser)
         };
         const viewDataTrainer = {
             title: "Play Gym Trainer Dashboard",
