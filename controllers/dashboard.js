@@ -12,12 +12,15 @@ const dashboard = {
     index(request, response) {
         logger.info("dashboard rendering");
         const loggedInUser = accounts.getCurrentUser(request);
+
         const viewDataMember = {
             title: "Play Gym Dashboard",
             assessment:assessmentCollection.getUserAssessmets(loggedInUser.id),
             user:accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
             //bmi:util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
-            bmi: Number(util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id)))
+            bmi: Number(util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))),
+            idealWeightInd: util.isIdealWeight(loggedInUser),
+            bmiCategory: util.determineBMICategory(loggedInUser)
         };
         const viewDataTrainer = {
             title: "Play Gym Trainer Dashboard",

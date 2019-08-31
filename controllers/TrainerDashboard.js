@@ -31,9 +31,11 @@ const trainerDashboard = {
             title: "Play Gym Trainer Dashboard",
             member: request.params.id,
             name: users.getUserById(request.params.id).firstName,
-            user: "User",//accounts.getCurrentUser(request).firstName.concat(accounts.getCurrentUser(request).lastName),
-            bmi: "1",//util.calculateBMI(accounts.getCurrentUser(request),assessmentCollection.getUserAssessmets(loggedInUser.id))
+            user: users.getUserById(request.params.id).firstName.concat(users.getUserById(request.params.id).lastName),
+            bmi: util.calculateBMI(users.getUserById(request.params.id)),
+            idealWeightInd: util.isIdealWeight(users.getUserById(request.params.id)),
             assessment:assessmentCollection.getUserAssessmets(request.params.id),
+            bmiCategory: util.determineBMICategory(users.getUserById(request.params.id))
         };
 
         response.render("trainermemberdetails",viewTrainerMember);

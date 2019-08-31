@@ -47,6 +47,18 @@
       "waist": 0,
       "hips": 0,
       "comment": ""
+    },
+    {
+      "id": "eb62b970-b5cd-43aa-995d-089b93377836",
+      "userId": "65e61aa0-27bc-4fc5-8334-98f0215192d0",
+      "date": "2019-08-28T14:51:43.928Z",
+      "weight": 56,
+      "chest": 52,
+      "thigh": 52,
+      "upperArm": 14,
+      "waist": 30,
+      "hips": 52,
+      "comment": "bit skinny :)"
     }
   ]
 }

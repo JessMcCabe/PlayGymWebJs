@@ -26,7 +26,8 @@ const userStore = {
   },
 
   getTrainersMembers(trainerid) {
-    return this.store.findBy(this.collection, {trainerid: trainerid});
+    const type = "member";
+    return this.store.findBy(this.collection,{type:type});//bring back all members for a trainer
   },
 
   deleteUser(id) {
